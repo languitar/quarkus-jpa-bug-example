@@ -6,7 +6,7 @@ import javax.ws.rs.Produces
 import javax.ws.rs.core.MediaType
 
 @Path("/hello-resteasy")
-class GreetingResource {
+class GreetingResource(private val repo: CommentEventRepo) {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
