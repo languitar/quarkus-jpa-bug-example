@@ -5,6 +5,7 @@ import java.time.Instant
 import java.util.*
 import javax.enterprise.context.ApplicationScoped
 import javax.persistence.Embedded
+import javax.persistence.Embeddable
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.Id
@@ -13,7 +14,7 @@ enum class CommentEventType {
     CREATED, MODIFIED, HIDDEN
 }
 
-@Entity
+@Embeddable
 class Test {
     @Id
     var id: Long? = 1L
